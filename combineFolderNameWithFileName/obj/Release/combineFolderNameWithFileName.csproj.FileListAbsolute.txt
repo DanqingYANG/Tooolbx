@@ -16,7 +16,6 @@ D:\Codes\C#\combineFolderNameWithFileName\combineFolderNameWithFileName\combineF
 D:\Codes\C#\Tooolbx\combineFolderNameWithFileName\bin\Release\combineFolderNameWithFileName.exe.config
 D:\Codes\C#\Tooolbx\combineFolderNameWithFileName\bin\Release\combineFolderNameWithFileName.exe
 D:\Codes\C#\Tooolbx\combineFolderNameWithFileName\bin\Release\combineFolderNameWithFileName.pdb
-D:\Codes\C#\Tooolbx\combineFolderNameWithFileName\obj\Release\combineFolderNameWithFileName.csprojAssemblyReference.cache
 D:\Codes\C#\Tooolbx\combineFolderNameWithFileName\obj\Release\MainWindow.g.cs
 D:\Codes\C#\Tooolbx\combineFolderNameWithFileName\obj\Release\App.g.cs
 D:\Codes\C#\Tooolbx\combineFolderNameWithFileName\obj\Release\combineFolderNameWithFileName_MarkupCompile.cache
@@ -28,3 +27,7 @@ D:\Codes\C#\Tooolbx\combineFolderNameWithFileName\obj\Release\combineFolderNameW
 D:\Codes\C#\Tooolbx\combineFolderNameWithFileName\obj\Release\combineFolderNameWithFileName.csproj.CoreCompileInputs.cache
 D:\Codes\C#\Tooolbx\combineFolderNameWithFileName\obj\Release\combineFolderNameWithFileName.exe
 D:\Codes\C#\Tooolbx\combineFolderNameWithFileName\obj\Release\combineFolderNameWithFileName.pdb
+D:\Codes\C#\Tooolbx\combineFolderNameWithFileName\obj\Release\EmptyFolderSelector.g.cs
+D:\Codes\C#\Tooolbx\combineFolderNameWithFileName\obj\Release\EmptyFolderSelector.baml
+D:\Codes\C#\Tooolbx\combineFolderNameWithFileName\obj\Release\App.baml
+D:\Codes\C#\Tooolbx\combineFolderNameWithFileName\obj\Release\combineFolderNameWithFileName.csprojAssemblyReference.cache

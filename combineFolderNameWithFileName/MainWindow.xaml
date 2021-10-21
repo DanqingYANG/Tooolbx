@@ -8,27 +8,13 @@
         Title="MainWindow"
         Height="150"
         Width="500">
-    <Window.Resources>
-        <Style TargetType="Button">
-            <Setter Property="Height"
-                    Value="30" />
-            <Setter Property="MinWidth"
-                    Value="100" />
-            <Setter Property="Background"
-                    Value="White" />
-            <Setter Property="BorderThickness"
-                    Value="2" />
-            <Setter Property="Margin"
-                    Value="2,0"/>
-        </Style>
-    </Window.Resources>
-    
-    
+
     <Grid Margin="10">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="100"></ColumnDefinition>
             <ColumnDefinition Width="5" />
-            <ColumnDefinition Width="*" MinWidth="200"/>
+            <ColumnDefinition Width="*"
+                              MinWidth="200" />
             <ColumnDefinition Width="5" />
             <ColumnDefinition Width="130" />
         </Grid.ColumnDefinitions>
@@ -40,13 +26,11 @@
 
         <Label Content="Folder Path: "
                HorizontalAlignment="Left"
-               VerticalAlignment="Top" 
-               />
+               VerticalAlignment="Top" />
         <TextBox TextWrapping="Wrap"
                  Text="{Binding SourceDir}"
                  Grid.ColumnSpan="2"
-                 Grid.Column="1" 
-                 />
+                 Grid.Column="1" />
         <Button Content="Select Folder"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Top"
@@ -54,27 +38,29 @@
                 Grid.Column="4"
                 Command="{Binding OnSelectFolder}" />
 
-        <StackPanel Grid.Row="2" Orientation="Horizontal" Grid.Column="2" Grid.ColumnSpan="2" HorizontalAlignment="Right">
+        <StackPanel Grid.Row="2"
+                    Orientation="Horizontal"
+                    Grid.Column="1"
+                    Grid.ColumnSpan="2"
+                    HorizontalAlignment="Right"
+                    >
             <Button Content="OK"
                     HorizontalAlignment="Left"
                     VerticalAlignment="Top"
-                    Width="75"
-                    Grid.Column="2"
-                    Grid.Row="1" 
-                    Command="{Binding OnMove}"/>
+                    Command="{Binding OnMove}" />
             <Button Content="Cancel"
                     HorizontalAlignment="Left"
                     VerticalAlignment="Top"
-                    Width="75"
-                    RenderTransformOrigin="-0.733,-5.75"
-                    Grid.Column="1"
-                    Grid.Row="1" 
-                    Click="Button_Click"/>
+                    Click="Button_Click" />
+        </StackPanel >
+
+        <StackPanel Grid.Row="2"
+                    Grid.Column="5">
+            <CheckBox Content="Remove"
+                      IsChecked="{Binding RemoveAfterCopied}" />
+            <CheckBox Content="Remove2"
+                      IsChecked="{Binding RemoveEmptyFolders}" />
         </StackPanel>
-        
-        <CheckBox Content="Remove"
-                  Grid.Row="2"
-                  Grid.Column="5"
-                  IsChecked="{Binding RemoveAfterCopied}"/>
+
     </Grid>
 </Window>

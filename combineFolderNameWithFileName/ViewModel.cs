@@ -37,6 +37,18 @@ namespace combineFolderNameWithFileName
             }
         }
 
+        // checkbox
+        private bool removeEmptyFolders;
+        public bool RemoveEmptyFolders
+        {
+            get { return removeEmptyFolders; }
+            set
+            {
+                removeEmptyFolders = value;
+                NotifyPropertyChanged("RemoveEmptyFolders");
+            }
+        }
+
         public ViewModel()
         {
             OnSelectFolder = new RelayCommand(OpenExplorer);
@@ -74,8 +86,11 @@ namespace combineFolderNameWithFileName
             return;
         }
 
+        
+
         public void CopyFiles()
         {
+            EmptyFolderSelector emptyFolder = new EmptyFolderSelector();
             // get subfolders
             if (SourceDir == null || SourceDir == "")
                 return;
@@ -104,6 +119,11 @@ namespace combineFolderNameWithFileName
                     foreach (string f in files)
                     {
                         File.Delete(f);
+                    }
+
+                    if (RemoveEmptyFolders)
+                    {
+                        emptyFolder.Show();
                     }
                 }
             }

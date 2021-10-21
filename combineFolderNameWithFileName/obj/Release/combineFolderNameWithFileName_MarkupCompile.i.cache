@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\Codes\C#\combineFolderNameWithFileName\combineFolderNameWithFileName\combineFolderNameWithFileName\obj\Release\
+D:\Codes\C#\Tooolbx\combineFolderNameWithFileName\obj\Release\
 combineFolderNameWithFileName
 none
 false
 TRACE
-D:\Codes\C#\combineFolderNameWithFileName\combineFolderNameWithFileName\combineFolderNameWithFileName\App.xaml
-11151548125
+D:\Codes\C#\Tooolbx\combineFolderNameWithFileName\App.xaml
+21808945281
 
-8979034959
+11-1282598272
 14-1290796308
-MainWindow.xaml;
+EmptyFolderSelector.xaml;MainWindow.xaml;
 
-False
+True
 

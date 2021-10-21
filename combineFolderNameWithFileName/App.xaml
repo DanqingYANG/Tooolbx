@@ -4,6 +4,17 @@
              xmlns:local="clr-namespace:combineFolderNameWithFileName"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <Style TargetType="Button">
+            <Setter Property="Height"
+                    Value="30" />
+            <Setter Property="MinWidth"
+                    Value="100" />
+            <Setter Property="Background"
+                    Value="White" />
+            <Setter Property="BorderThickness"
+                    Value="2" />
+            <Setter Property="Margin"
+                    Value="2,0" />
+        </Style>
     </Application.Resources>
 </Application>

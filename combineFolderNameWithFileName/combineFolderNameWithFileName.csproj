@@ -59,8 +59,17 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="EmptyFolderSelector.xaml.cs">
+      <DependentUpon>EmptyFolderSelector.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EmptyFolderSelectorVM.cs" />
+    <Compile Include="FolderSelector.cs" />
     <Compile Include="ViewModel.cs" />
     <Compile Include="RelayCommand.cs" />
+    <Page Include="EmptyFolderSelector.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
