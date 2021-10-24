@@ -6,12 +6,14 @@ In each folder we have some files with no index. Sometimes it can be hundred of 
 
 
 
-<img src="..\Tooolbx\testfile\01\image-202103022.png"/>
+<img src="https://raw.githubusercontent.com/DanqingYANG/Tooolbx/main/testfile/01/image-202103022.png"/>
 
 
 
 
 
-a gif:
 
-<img src="https://github.com/DanqingYANG/Tooolbx/blob/master/combineFolderNameWithFileName.gif"/>
+
+Gif:
+
+<img src="https://raw.githubusercontent.com/DanqingYANG/Tooolbx/main/combineFolderNameWithFileName.gif"/>
