@@ -16,7 +16,6 @@ D:\Codes\C#\combineFolderNameWithFileName\combineFolderNameWithFileName\combineF
 D:\Codes\C#\Tooolbx\combineFolderNameWithFileName\bin\Debug\combineFolderNameWithFileName.exe.config
 D:\Codes\C#\Tooolbx\combineFolderNameWithFileName\bin\Debug\combineFolderNameWithFileName.exe
 D:\Codes\C#\Tooolbx\combineFolderNameWithFileName\bin\Debug\combineFolderNameWithFileName.pdb
-D:\Codes\C#\Tooolbx\combineFolderNameWithFileName\obj\Debug\combineFolderNameWithFileName.csprojAssemblyReference.cache
 D:\Codes\C#\Tooolbx\combineFolderNameWithFileName\obj\Debug\MainWindow.g.cs
 D:\Codes\C#\Tooolbx\combineFolderNameWithFileName\obj\Debug\App.g.cs
 D:\Codes\C#\Tooolbx\combineFolderNameWithFileName\obj\Debug\combineFolderNameWithFileName_MarkupCompile.cache
@@ -28,3 +27,7 @@ D:\Codes\C#\Tooolbx\combineFolderNameWithFileName\obj\Debug\combineFolderNameWit
 D:\Codes\C#\Tooolbx\combineFolderNameWithFileName\obj\Debug\combineFolderNameWithFileName.csproj.CoreCompileInputs.cache
 D:\Codes\C#\Tooolbx\combineFolderNameWithFileName\obj\Debug\combineFolderNameWithFileName.exe
 D:\Codes\C#\Tooolbx\combineFolderNameWithFileName\obj\Debug\combineFolderNameWithFileName.pdb
+D:\Codes\C#\Tooolbx\combineFolderNameWithFileName\obj\Debug\EmptyFolderSelector.g.cs
+D:\Codes\C#\Tooolbx\combineFolderNameWithFileName\obj\Debug\App.baml
+D:\Codes\C#\Tooolbx\combineFolderNameWithFileName\obj\Debug\EmptyFolderSelector.baml
+D:\Codes\C#\Tooolbx\combineFolderNameWithFileName\obj\Debug\combineFolderNameWithFileName.csprojAssemblyReference.cache

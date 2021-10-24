@@ -53,6 +53,11 @@ namespace combineFolderNameWithFileName
         {
             OnSelectFolder = new RelayCommand(OpenExplorer);
             OnMove = new RelayCommand(CopyFiles);
+            removeAfterCopied = true;
+            removeEmptyFolders = true;
+
+            // test
+            
         }
 
         #region
