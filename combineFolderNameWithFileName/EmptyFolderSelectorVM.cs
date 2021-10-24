@@ -57,15 +57,17 @@ namespace combineFolderNameWithFileName
         void RemoveSelectedFolders()
         {
             
-            List<string> temp = new List<string>();
+            List<string> SelectedFolderPaths = new List<string>();
             List<FolderSelector> list = FolderSelectors.ToList();
-            GetSelectedFolderFullPath(ref temp, list);
+
+            GetSelectedFolderFullPath(ref SelectedFolderPaths, list);
             //GetSelectedFolderFullPath(ref temp, FolderSelectorVMs);
+
             foreach (var fp in SelectedFolderPaths)
             {
-                if(File.Exists(fp))
+                if(Directory.Exists(fp))
                 {
-                    //File.Delete(fp);
+                    Directory.Delete(fp);
                 }
             }
             return;
@@ -109,7 +111,7 @@ namespace combineFolderNameWithFileName
             }
         }
 
-        bool checkEmptyFoldersOnly(ref FolderSelector fs)
+        bool checkEmptyFoldersOnly(FolderSelector fs)
         {
             bool containsFile = fs.DirInfo.GetFiles().Length > 0;
             if (fs.Children.Count != 0)            
@@ -119,8 +121,7 @@ namespace combineFolderNameWithFileName
                 for (int i = 0; i < fs.Children.Count; ++i)
                 {
                     var c = fs.Children[i];
-                    containsFile |= checkEmptyFoldersOnly(ref c);
-                    fs.Children[i] = c;
+                    containsFile |= checkEmptyFoldersOnly(c);
                 }
             }
             fs.IsChecked = !containsFile;
@@ -129,10 +130,9 @@ namespace combineFolderNameWithFileName
             
         void CheckDefault()
         {
-            FolderSelector f = folderSelector;
-            checkEmptyFoldersOnly(ref f);
-            folderSelector = f;
-            int k = 0;
+            FolderSelector.SelectState = true;
+            checkEmptyFoldersOnly(folderSelector);
+            FolderSelector.SelectState = false;
         }
 
         void CheckAll()

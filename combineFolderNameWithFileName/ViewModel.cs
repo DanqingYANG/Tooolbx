@@ -56,8 +56,8 @@ namespace combineFolderNameWithFileName
             removeAfterCopied = true;
             removeEmptyFolders = true;
 
-            // test
-            sourceDir = @"F:\Pluralsight\Needs exploitation\exploring-observing-stakeholders";
+            // test folder
+            
         }
 
         #region

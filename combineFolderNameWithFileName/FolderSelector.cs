@@ -17,13 +17,24 @@ namespace combineFolderNameWithFileName
         public List<FolderSelector> Children { get; set; }
         public string Name { get; set; }
 
+        public static bool SelectState;
+
+
         private bool? isChecked;
         public bool? IsChecked
         {
             get { return isChecked; }
             set
             {
-                SetIsChecked(value, true, true);
+                if(SelectState == true)
+                {
+                    isChecked = value;
+                    NotifyPropertyChanged("IsChecked");
+                }
+                else
+                {
+                    SetIsChecked(value, true, true);
+                }
             }
         }
 
@@ -68,6 +79,7 @@ namespace combineFolderNameWithFileName
             Children = new List<FolderSelector>();
             Name = DirInfo.Name;
             isChecked = true; // init
+            SelectState = false;
 
             var subdirs = DirInfo.GetDirectories();
             foreach(var dir in subdirs)
