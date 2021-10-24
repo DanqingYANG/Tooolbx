@@ -57,7 +57,7 @@ namespace combineFolderNameWithFileName
             removeEmptyFolders = true;
 
             // test
-            
+            sourceDir = @"F:\Pluralsight\Needs exploitation\exploring-observing-stakeholders";
         }
 
         #region
