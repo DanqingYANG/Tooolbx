@@ -18,17 +18,17 @@ Gif:
 
 + Testfolder structure:
 
-<img src="https://raw.githubusercontent.com/DanqingYANG/Tooolbx/main/folders.gif"/>
+<img src="https://raw.githubusercontent.com/DanqingYANG/Tooolbx/main/folders.gif" style="zoom:90%;" />
 
 
 
 + Add pdfs to the root directory
 + Delete pdfs in subfolders
 
-<img src="https://raw.githubusercontent.com/DanqingYANG/Tooolbx/main/remove_pdf_checked.gif"/>
+<img src="https://raw.githubusercontent.com/DanqingYANG/Tooolbx/main/remove_pdf_checked.gif" style="zoom:90%;" />
 
 
 
 + Option: Remove empty folders
 
-<img src="https://raw.githubusercontent.com/DanqingYANG/Tooolbx/main/remove_folders_checked.gif"/>
+<img src="https://raw.githubusercontent.com/DanqingYANG/Tooolbx/main/remove_folders_checked.gif" style="zoom:90%;" />

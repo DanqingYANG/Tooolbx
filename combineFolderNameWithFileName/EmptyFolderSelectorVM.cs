@@ -29,14 +29,17 @@ namespace combineFolderNameWithFileName
             OnCheckAll = new RelayCommand(CheckAll);
             OnUnCheckAll = new RelayCommand(UnCheckAll);
             OnRemove = new RelayCommand(RemoveSelectedFolders);
+
+            // init state
+            UnCheckAll();
         }
 
-        private string currState;
-        public string CurrState
-        {
-            get { return currState; }
-            set { currState = value; }
-        }
+        //private string currState;
+        //public string CurrState
+        //{
+        //    get { return currState; }
+        //    set { currState = value; }
+        //}
 
 
         //public bool SetCheckBox(FolderSelector fs)

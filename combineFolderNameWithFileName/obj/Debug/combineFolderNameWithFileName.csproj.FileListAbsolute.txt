@@ -30,4 +30,4 @@ D:\Codes\C#\Tooolbx\combineFolderNameWithFileName\obj\Debug\combineFolderNameWit
 D:\Codes\C#\Tooolbx\combineFolderNameWithFileName\obj\Debug\EmptyFolderSelector.g.cs
 D:\Codes\C#\Tooolbx\combineFolderNameWithFileName\obj\Debug\App.baml
 D:\Codes\C#\Tooolbx\combineFolderNameWithFileName\obj\Debug\EmptyFolderSelector.baml
-D:\Codes\C#\Tooolbx\combineFolderNameWithFileName\obj\Debug\combineFolderNameWithFileName.csprojAssemblyReference.cache
+D:\Codes\C#\Tooolbx\combineFolderNameWithFileName\obj\Debug\combineFolderNameWithFileName.csproj.AssemblyReference.cache
