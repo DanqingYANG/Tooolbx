@@ -16,4 +16,19 @@ In each folder we have some files with no index. Sometimes it can be hundred of 
 
 Gif:
 
-<img src="https://raw.githubusercontent.com/DanqingYANG/Tooolbx/main/combineFolderNameWithFileName.gif"/>
++ Testfolder structure:
+
+<img src="https://raw.githubusercontent.com/DanqingYANG/Tooolbx/main/folders.gif"/>
+
+
+
++ Add pdfs to the root directory
++ Delete pdfs in subfolders
+
+<img src="https://raw.githubusercontent.com/DanqingYANG/Tooolbx/main/remove_pdf_checked.gif"/>
+
+
+
++ Option: Remove empty folders
+
+<img src="https://raw.githubusercontent.com/DanqingYANG/Tooolbx/main/remove_folders_checked.gif"/>
