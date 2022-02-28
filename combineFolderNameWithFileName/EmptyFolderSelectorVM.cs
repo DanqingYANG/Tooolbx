@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -70,7 +71,8 @@ namespace combineFolderNameWithFileName
             {
                 if(Directory.Exists(fp))
                 {
-                    Directory.Delete(fp);
+                    //Directory.Delete(fp);
+                    Debug.WriteLine(fp);
                 }
             }
             return;
@@ -117,7 +119,7 @@ namespace combineFolderNameWithFileName
         bool checkEmptyFoldersOnly(FolderSelector fs)
         {
             bool containsFile = fs.DirInfo.GetFiles().Length > 0;
-            if (fs.Children.Count != 0)            
+            if (fs.Children.Count != 0)
             {
                 // DFS 
                 //containsFile |= fs.DirInfo.GetFiles().Length > 0;

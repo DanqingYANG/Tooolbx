@@ -7,7 +7,8 @@
         mc:Ignorable="d"
         Title="MainWindow"
         Height="150"
-        Width="530">
+        Width="530"
+        WindowStartupLocation="CenterScreen">
 
     <Grid Margin="10">
         <Grid.ColumnDefinitions>
@@ -57,7 +58,7 @@
         <StackPanel Grid.Row="2"
                     Grid.Column="5">
             <CheckBox Content="Remove pdfs"
-                      IsChecked="{Binding RemoveAfterCopied}" />
+                      IsChecked="{Binding RemovePdfs}" />
             <CheckBox Content="Remove Empty Folders"
                       IsChecked="{Binding RemoveEmptyFolders}" />
         </StackPanel>

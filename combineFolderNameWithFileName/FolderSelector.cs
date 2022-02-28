@@ -50,7 +50,6 @@ namespace combineFolderNameWithFileName
             {
                 myParents[DirInfo.Parent.FullName].VerifyCheckedState();
             }
-                
             NotifyPropertyChanged("IsChecked");
         }
 
@@ -73,21 +72,75 @@ namespace combineFolderNameWithFileName
             SetIsChecked(state, false, true); // parent branch
         }
 
-        public FolderSelector(string path)
+        #region
+        // async test
+        public void test()
         {
-            DirInfo = new DirectoryInfo(path);
-            Children = new List<FolderSelector>();
-            Name = DirInfo.Name;
-            isChecked = true; // init
-            SelectState = false;
-
             var subdirs = DirInfo.GetDirectories();
-            foreach(var dir in subdirs)
+            foreach (var dir in subdirs)
             {
                 FolderSelector child = new FolderSelector(dir.FullName);
                 myParents[child.DirInfo.FullName] = this;
                 Children.Add(child);
             }
+        }
+
+        // async test1
+        public void test1()
+        {
+            //IEnumerable<int> GenerateWithYield()
+            //{
+            //    var i = 0;
+            //    while (i < 5)
+            //    {
+            //        yield return ++i;
+            //        yield return i + 2;
+            //    }
+            //}
+
+            //foreach (var number in GenerateWithYield())
+            //    Console.WriteLine(number);
+            var subdirs = DirInfo.GetDirectories();
+            IEnumerable<int> GenerateWithYield()
+            {
+                yield return 1;
+            }
+            
+            foreach (var dir in subdirs)
+            {
+                FolderSelector child = new FolderSelector(dir.FullName);
+                myParents[child.DirInfo.FullName] = this;
+                Children.Add(child);
+            }
+        }
+
+        // async test2
+        public void test2()
+        {
+            var subdirs = DirInfo.GetDirectories();
+            foreach (var dir in subdirs)
+            {
+                FolderSelector child = new FolderSelector(dir.FullName);
+                myParents[child.DirInfo.FullName] = this;
+                Children.Add(child);
+            }
+        }
+
+        #endregion
+
+        public FolderSelector(string path)
+        {
+            DirInfo = new DirectoryInfo(path);
+            Children = new List<FolderSelector>();
+            Name = DirInfo.Name;
+            // init
+            isChecked = true; 
+            SelectState = false;
+
+            //test();
+            //test1();
+            //test2();
+            
             return;
         }
 

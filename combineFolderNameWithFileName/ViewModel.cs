@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -28,11 +29,11 @@ namespace combineFolderNameWithFileName
         string[] Subfolders = { };
 
         // checkbox
-        private bool removeAfterCopied;
-        public bool RemoveAfterCopied
+        private bool removePdfs;
+        public bool RemovePdfs
         {
-            get { return removeAfterCopied; }
-            set { removeAfterCopied = value;
+            get { return removePdfs; }
+            set { removePdfs = value;
                 NotifyPropertyChanged("RemoveAfterCopied");
             }
         }
@@ -53,11 +54,11 @@ namespace combineFolderNameWithFileName
         {
             OnSelectFolder = new RelayCommand(OpenExplorer);
             OnMove = new RelayCommand(CopyFiles);
-            removeAfterCopied = true;
-            removeEmptyFolders = false;
+            removePdfs = false;
+            removeEmptyFolders = true;
 
             // test folder
-            
+            //sourceDir = @"D:\Program_Files";
         }
 
         #region
@@ -92,10 +93,8 @@ namespace combineFolderNameWithFileName
         }
 
         
-
         public void CopyFiles()
         {
-            EmptyFolderSelector emptyFolder = new EmptyFolderSelector();
             // get subfolders
             if (SourceDir == null || SourceDir == "")
                 return;
@@ -103,34 +102,41 @@ namespace combineFolderNameWithFileName
             if (Folders==null)
                 return;
             Subfolders = Folders;
+            List<string> files = new List<string>();
+            List<string> filesToBeRemoved = new List<string>();
             // copy each file out
             foreach (var folder in Subfolders)
             {
                 // get pdf file 
                 // var files = Directory.EnumerateFiles(folder, "*.*", SearchOption.AllDirectories).Where(s => s.EndsWith(".pdf"));
-                string[] files = Directory.GetFiles(folder, "*.pdf");
+                files = Directory.GetFiles(folder, "*.pdf").ToList();
+                filesToBeRemoved.AddRange(files);
+
                 foreach (var f in files)
                 {
                     // Remove path from the file name.
                     string fName = f.Substring(folder.Length + 1);
-                    string folderName = folder.Substring(sourceDir.Length+1);
+                    string folderName = folder.Substring(sourceDir.Length + 1);
                     // Use the Path.Combine method to safely append the file name to the path.
                     // Will overwrite if the destination file already exists.
-                    File.Copy(f, Path.Combine(SourceDir, folderName+"-"+fName), true);
+                    File.Copy(f, Path.Combine(SourceDir, folderName + "-" + fName), true);
                 }
+            }
 
-                if (RemoveAfterCopied)
+            EmptyFolderSelector emptyFolder = new EmptyFolderSelector();
+
+            if (RemoveEmptyFolders)
+            {
+                emptyFolder.Show();
+            }
+
+            if (RemovePdfs)
+            {
+                foreach (string f in filesToBeRemoved)
                 {
-                    foreach (string f in files)
-                    {
-                        File.Delete(f);
-                    }
-
-                    if (RemoveEmptyFolders)
-                    {
-                        emptyFolder.Show();
-                    }
-                }
+                    //File.Delete(f);
+                    Debug.WriteLine(f);
+                }        
             }
             return;
         }
